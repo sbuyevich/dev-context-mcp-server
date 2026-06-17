@@ -134,7 +134,22 @@ HTTP is deliberately restricted to an unauthenticated loopback `http://`
 address. It is suitable for local development, not shared-network deployment.
 Logs are written to standard error and to the configured Serilog file sink.
 
-### 4. Connect MCP Inspector
+### 4. Connect MCP
+You can test DevContext MCP calling from LLM.
+For example for Codex
+
+```
+[mcp_servers.devcontext]
+url = "http://127.0.0.1:2222/mcp"
+enabled = true
+required = false
+tool_timeout_sec = 10
+```
+
+To test MCP connection ask in chat about DevContext.
+
+
+### 5. Connect MCP Inspector
 
 For the default HTTP configuration, start the Server and then run:
 
